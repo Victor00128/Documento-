@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Vortex Chat
 
 Un chat con IA que hice usando React. Tiene dos modelos diferentes y funciona bastante bien.
@@ -115,3 +116,6 @@ El chatbot ahora recuerda las imágenes que envías durante toda la conversació
 - Si hay errores técnicos, revisa la consola del navegador
 
 Eso es todo. Si algo no funciona, revisa que las keys estén bien.
+=======
+# Documento-
+>>>>>>> cafa0e4a749045fc30d18e3215071324c4f77b3d
