@@ -1,0 +1,393 @@
+/* ==================== VARIABLES DE ANIMACIÓN ==================== */
+:root {
+  --animation-speed-fast: 0.15s;
+  --animation-speed-normal: 0.3s;
+  --animation-speed-slow: 0.5s;
+  --animation-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --animation-ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* ==================== ANIMACIONES DE LOS MENSAJES ==================== */
+@keyframes message-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes message-fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-message-in {
+  animation: message-slide-in var(--animation-speed-normal) var(--animation-ease) forwards;
+}
+
+.animate-message-fade {
+  animation: message-fade-in var(--animation-speed-fast) var(--animation-ease) forwards;
+}
+
+/* ==================== ANIMACIONES DEL SIDEBAR ==================== */
+@keyframes sidebar-slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes sidebar-slide-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.sidebar-enter {
+  animation: sidebar-slide-in var(--animation-speed-normal) var(--animation-ease) forwards;
+}
+
+.sidebar-exit {
+  animation: sidebar-slide-out var(--animation-speed-normal) var(--animation-ease) forwards;
+}
+
+/* ==================== ANIMACIONES DE LOS BOTONES ==================== */
+.button-hover-lift {
+  transition: all var(--animation-speed-fast) var(--animation-ease);
+}
+
+.button-hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.button-hover-lift:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.1s var(--animation-ease);
+}
+
+/* ==================== ANIMACIONES DE TYPING INDICATOR ==================== */
+@keyframes typing-dot {
+  0%, 60%, 100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
+.typing-indicator .dot {
+  animation: typing-dot 1.4s infinite ease-in-out;
+}
+
+.typing-indicator .dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.typing-indicator .dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator .dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* ==================== ANIMACIONES DE FOCUS ==================== */
+.focus-ring {
+  transition: all var(--animation-speed-fast) var(--animation-ease);
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  transform: scale(1.02);
+}
+
+/* ==================== ANIMACIONES DE TOOLTIP ==================== */
+@keyframes tooltip-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.tooltip-enter {
+  animation: tooltip-fade-in var(--animation-speed-fast) var(--animation-ease) forwards;
+}
+
+/* ==================== ANIMACIONES DE LOADING ==================== */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ==================== ANIMACIONES DE MODAL/TOAST ==================== */
+@keyframes modal-backdrop-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-content-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-backdrop {
+  animation: modal-backdrop-fade-in var(--animation-speed-normal) var(--animation-ease) forwards;
+}
+
+.modal-content {
+  animation: modal-content-slide-in var(--animation-speed-normal) var(--animation-ease) forwards;
+}
+
+@keyframes toast-slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes toast-slide-out-right {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.toast-enter {
+  animation: toast-slide-in-right var(--animation-speed-normal) var(--animation-ease) forwards;
+}
+
+.toast-exit {
+  animation: toast-slide-out-right var(--animation-speed-normal) var(--animation-ease) forwards;
+}
+
+/* ==================== ANIMACIONES DE TEXTO ==================== */
+@keyframes text-glow {
+  from {
+    text-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 30px rgba(59, 130, 246, 0.6);
+  }
+}
+
+.text-glow-hover:hover {
+  animation: text-glow var(--animation-speed-slow) ease-in-out alternate infinite;
+}
+
+/* ==================== ANIMACIONES DE SCROLL ==================== */
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+/* ==================== ANIMACIONES DE HOVER MEJORADAS ==================== */
+.hover-scale {
+  transition: transform var(--animation-speed-fast) var(--animation-ease);
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-brightness {
+  transition: filter var(--animation-speed-fast) var(--animation-ease);
+}
+
+.hover-brightness:hover {
+  filter: brightness(1.1);
+}
+
+/* ==================== ANIMACIONES DE FADE ==================== */
+.fade-in {
+  opacity: 0;
+  animation: fade-in var(--animation-speed-normal) var(--animation-ease) forwards;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fade-in-up var(--animation-speed-normal) var(--animation-ease) forwards;
+}
+
+@keyframes fade-in-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================== ANIMACIONES DE SKELETON LOADING ==================== */
+@keyframes skeleton-loading {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #374151 25%, #4b5563 50%, #374151 75%);
+  background-size: 200px 100%;
+  animation: skeleton-loading 1.5s infinite linear;
+}
+
+/* ==================== ANIMACIONES RESPONSIVAS ==================== */
+@media (max-width: 768px) {
+  :root {
+    --animation-speed-fast: 0.1s;
+    --animation-speed-normal: 0.2s;
+    --animation-speed-slow: 0.3s;
+  }
+
+  .message-mobile-optimized {
+    transform: translateX(0) !important;
+    animation-duration: 0.2s;
+  }
+}
+
+/* ==================== ANIMACIONES DE ACCESIBILIDAD ==================== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==================== ANIMACIONES DE MICRO-INTERACCIONES ==================== */
+.micro-bounce {
+  transition: transform 0.1s var(--animation-ease-bounce);
+}
+
+.micro-bounce:active {
+  transform: scale(0.95);
+}
+
+.ripple-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-effect::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.ripple-effect:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* ==================== ANIMACIONES DE SCROLL INDICATOR ==================== */
+@keyframes scroll-indicator {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.scroll-indicator {
+  animation: scroll-indicator 2s ease-in-out infinite;
+}
+
+/* ==================== TRANSICIONES GLOBALES MEJORADAS ==================== */
+.transition-all {
+  transition: all var(--animation-speed-normal) var(--animation-ease);
+}
+
+.transition-colors {
+  transition: color var(--animation-speed-fast) var(--animation-ease),
+              background-color var(--animation-speed-fast) var(--animation-ease),
+              border-color var(--animation-speed-fast) var(--animation-ease);
+}
+
+.transition-transform {
+  transition: transform var(--animation-speed-fast) var(--animation-ease);
+}
+
+.transition-opacity {
+  transition: opacity var(--animation-speed-fast) var(--animation-ease);
+}

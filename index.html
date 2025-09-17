@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#1C1C1C" />
+        <meta name="description" content="Chat con IA simple" />
+        <title>Vortex Chat</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script type="importmap">
+            {
+                "imports": {
+                    "@google/genai": "https://esm.sh/@google/genai@^1.9.0",
+                    "react/": "https://esm.sh/react@^19.1.0/",
+                    "react": "https://esm.sh/react@^19.1.0",
+                    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+                    "react-markdown": "https://esm.sh/react-markdown@^9.0.1",
+                    "remark-gfm": "https://esm.sh/remark-gfm@^4.0.0",
+                    "react-syntax-highlighter": "https://esm.sh/react-syntax-highlighter@^15.5.0",
+                    "react-syntax-highlighter/dist/esm/styles/prism/": "https://esm.sh/react-syntax-highlighter@^15.5.0/dist/esm/styles/prism/",
+                    "react-syntax-highlighter/": "https://esm.sh/react-syntax-highlighter@^15.6.1/"
+                }
+            }
+        </script>
+        <style>
+            ::-webkit-scrollbar {
+                width: 8px;
+                height: 8px;
+            }
+            ::-webkit-scrollbar-track {
+                background: #18181b;
+            }
+            ::-webkit-scrollbar-thumb {
+                background-color: #52525b;
+                border-radius: 4px;
+                border: 2px solid #18181b;
+            }
+            ::-webkit-scrollbar-thumb:hover {
+                background-color: #71717a;
+            }
+
+            @keyframes fade-in-slide-up {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            .animate-message-in {
+                animation: fade-in-slide-up 0.4s ease-out forwards;
+            }
+
+            @keyframes fade-in-out {
+                0% {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                10% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                90% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                100% {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+            }
+            .animate-fade-in-out {
+                animation: fade-in-out 3s ease-in-out forwards;
+            }
+        </style>
+        <link rel="stylesheet" href="/index.css" />
+    </head>
+    <body class="bg-zinc-900">
+        <noscript>
+            <div
+                style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100vh;
+                    background-color: #1c1c1c;
+                    color: white;
+                    font-family:
+                        system-ui,
+                        -apple-system,
+                        sans-serif;
+                    text-align: center;
+                    padding: 2rem;
+                "
+            >
+                <div>
+                    <h1 style="font-size: 2rem; margin-bottom: 1rem">
+                        Vortex Chat
+                    </h1>
+                    <p style="font-size: 1.2rem; margin-bottom: 1rem">
+                        Necesitas JavaScript habilitado
+                    </p>
+                </div>
+            </div>
+        </noscript>
+
+        <div
+            id="initial-loader"
+            style="
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: #121212;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 9999;
+            "
+        >
+            <div style="text-align: center; color: white">
+                <div
+                    style="
+                        width: 40px;
+                        height: 40px;
+                        border: 3px solid #374151;
+                        border-top: 3px solid #3b82f6;
+                        border-radius: 50%;
+                        animation: spin 1s linear infinite;
+                        margin: 0 auto 1rem;
+                    "
+                ></div>
+                <p
+                    style="
+                        font-family:
+                            system-ui,
+                            -apple-system,
+                            sans-serif;
+                        font-size: 1.1rem;
+                    "
+                >
+                    Cargando...
+                </p>
+            </div>
+        </div>
+
+        <div
+            id="root"
+            style="height: 100vh; opacity: 0; transition: opacity 0.3s ease"
+        ></div>
+
+        <script type="module" src="/index.tsx"></script>
+
+        <script>
+            window.addEventListener("load", () => {
+                setTimeout(() => {
+                    const loader = document.getElementById("initial-loader");
+                    const root = document.getElementById("root");
+                    if (loader && root) {
+                        loader.style.opacity = "0";
+                        root.style.opacity = "1";
+                        setTimeout(() => {
+                            loader.remove();
+                        }, 300);
+                    }
+                }, 500);
+            });
+
+            const style = document.createElement("style");
+            style.textContent = `
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        *:focus-visible {
+          outline: 2px solid #3b82f6 !important;
+          outline-offset: 2px !important;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+          }
+        }
+      `;
+            document.head.appendChild(style);
+        </script>
+    </body>
+</html>

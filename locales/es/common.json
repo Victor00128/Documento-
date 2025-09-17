@@ -1,0 +1,188 @@
+{
+  "app": {
+    "title": "Vortex Chat",
+    "description": "Chat con IA simple y rápido"
+  },
+  "sidebar": {
+    "newChat": "Nuevo Chat",
+    "history": "Historial",
+    "conversations": "chats",
+    "noConversations": "No hay chats aún",
+    "startFirstConversation": "Empieza tu primer chat",
+    "generatingSummary": "Creando resumen..."
+  },
+  "chatInput": {
+    "placeholder": "Escribe algo...",
+    "placeholderWithFile": "Pregunta sobre el archivo...",
+    "attachFile": "Subir archivo",
+    "sendMessage": "Enviar",
+    "stopGeneration": "Parar generación",
+    "removeAttachment": "Quitar archivo",
+    "attached": "Archivo: {{fileName}}"
+  },
+  "messages": {
+    "bot": "Bot",
+    "typing": "Escribiendo...",
+    "regenerate": "Regenerar",
+    "edit": "Editar",
+    "delete": "Borrar",
+    "copy": "Copiar",
+    "usingImageContext": "📸 Referenciando imagen anterior"
+  },
+  "personalities": {
+    "flash": {
+      "name": "Modelo Flash",
+      "description": "Respuestas rápidas",
+      "welcomeMessage": "Hola! ¿En qué te ayudo?"
+    },
+    "developer": {
+      "name": "Modelo Desarrollador",
+      "description": "Para programar",
+      "welcomeMessage": "Hey! ¿Qué vamos a programar?"
+    }
+  },
+  "menu": {
+    "rename": "Renombrar",
+    "delete": "Borrar",
+    "download": "Descargar",
+    "changePersonality": "Cambiar modo",
+    "toggleSearch": "Buscar",
+    "toggleFullscreen": "Pantalla completa",
+    "settings": "Config"
+  },
+  "states": {
+    "loading": "Cargando...",
+    "searching": "Buscando...",
+    "processing": "Procesando...",
+    "generating": "Creando...",
+    "analyzing": "Analizando...",
+    "uploading": "Subiendo...",
+    "connecting": "Conectando...",
+    "loadingContext": "Cargando contexto...",
+    "usingPreviousImage": "Usando imagen anterior...",
+    "disconnected": "Sin conexión",
+    "reconnecting": "Reconectando..."
+  },
+  "tools": {
+    "internetSearch": "Búsqueda web",
+    "getCurrentTime": "Hora actual",
+    "searchingFor": "Buscando: {{query}}",
+    "searchResults": "Resultados",
+    "noResultsFound": "Sin resultados"
+  },
+  "errors": {
+    "general": "Algo salió mal",
+    "networkError": "Sin internet",
+    "apiKeyMissing": "Falta API key",
+    "apiKeyInvalid": "API key incorrecta",
+    "quotaExceeded": "Límite excedido",
+    "fileUploadError": "Error subiendo archivo",
+    "fileTooBig": "Archivo muy grande",
+    "fileTypeNotSupported": "Tipo de archivo no válido",
+    "conversationNotFound": "Chat no encontrado",
+    "messageTooLong": "Mensaje muy largo",
+    "cannotDeleteLastConversation": "No se puede borrar el último chat",
+    "summaryGenerationFailed": "Error creando resumen"
+  },
+  "success": {
+    "messageRegenerating": "Regenerando...",
+    "messageCopied": "Copiado",
+    "conversationRenamed": "Renombrado",
+    "conversationDeleted": "Borrado",
+    "conversationDownloaded": "Descargado",
+    "fileUploaded": "Archivo subido",
+    "settingsSaved": "Guardado",
+    "newConversationCreated": "Nuevo chat",
+    "personalityChanged": "Modo cambiado",
+    "summaryGenerated": "Resumen creado",
+    "searchEnabled": "Búsqueda activada",
+    "searchDisabled": "Búsqueda desactivada",
+    "fullscreenEnabled": "Pantalla completa",
+    "fullscreenDisabled": "Pantalla normal"
+  },
+  "actions": {
+    "send": "Enviar",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "save": "Guardar",
+    "delete": "Borrar",
+    "rename": "Renombrar",
+    "download": "Descargar",
+    "upload": "Subir",
+    "copy": "Copiar",
+    "edit": "Editar",
+    "close": "Cerrar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "retry": "Reintentar",
+    "refresh": "Actualizar"
+  },
+  "confirmations": {
+    "deleteConversation": "¿Borrar este chat?",
+    "deleteMessage": "¿Borrar mensaje?",
+    "clearAllConversations": "¿Borrar todos los chats?",
+    "resetSettings": "¿Resetear configuración?"
+  },
+  "file": {
+    "selectFile": "Elegir archivo",
+    "dropFileHere": "Suelta el archivo aquí",
+    "supportedFormats": "Formatos: {{formats}}",
+    "maxFileSize": "Máximo: {{size}}",
+    "processing": "Procesando...",
+    "analyzing": "Analizando...",
+    "ready": "Listo"
+  },
+  "accessibility": {
+    "openSidebar": "Abrir sidebar",
+    "closeSidebar": "Cerrar sidebar",
+    "scrollToBottom": "Ir al final",
+    "focusInput": "Focus input",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "selectPersonality": "Elegir modo"
+  },
+  "time": {
+    "now": "ahora",
+    "minuteAgo": "hace 1 min",
+    "minutesAgo": "hace {{count}} min",
+    "hourAgo": "hace 1h",
+    "hoursAgo": "hace {{count}}h",
+    "dayAgo": "ayer",
+    "daysAgo": "hace {{count}} días",
+    "weekAgo": "hace 1 sem",
+    "weeksAgo": "hace {{count}} sem",
+    "monthAgo": "hace 1 mes",
+    "monthsAgo": "hace {{count}} meses",
+    "yearAgo": "hace 1 año",
+    "yearsAgo": "hace {{count}} años"
+  },
+  "search": {
+    "placeholder": "Buscar...",
+    "noResults": "Sin resultados para '{{query}}'",
+    "resultsFound": "{{count}} resultado(s)",
+    "searchInProgress": "Buscando...",
+    "clearSearch": "Limpiar"
+  },
+  "settings": {
+    "language": "Idioma",
+    "theme": "Tema",
+    "notifications": "Notificaciones",
+    "privacy": "Privacidad",
+    "about": "Info",
+    "version": "Versión",
+    "clearData": "Borrar datos",
+    "exportData": "Exportar",
+    "importData": "Importar"
+  },
+  "features": {
+    "dualPersonality": "Dos modos IA",
+    "multimodalAnalysis": "Analiza archivos",
+    "realTimeResponses": "Respuestas rápidas",
+    "conversationMemory": "Memoria de chat",
+    "internetSearch": "Búsqueda web",
+    "fileAnalysis": "Análisis archivos",
+    "codeGeneration": "Generar código",
+    "languageSupport": "Multi idioma"
+  }
+}

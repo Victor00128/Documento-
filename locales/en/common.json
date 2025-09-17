@@ -1,0 +1,188 @@
+{
+  "app": {
+    "title": "Vortex Chat",
+    "description": "Simple AI chat app"
+  },
+  "sidebar": {
+    "newChat": "New Chat",
+    "history": "History",
+    "conversations": "chats",
+    "noConversations": "No chats yet",
+    "startFirstConversation": "Start your first chat",
+    "generatingSummary": "Making summary..."
+  },
+  "chatInput": {
+    "placeholder": "Type something...",
+    "placeholderWithFile": "Ask about the file...",
+    "attachFile": "Upload file",
+    "sendMessage": "Send",
+    "stopGeneration": "Stop generation",
+    "removeAttachment": "Remove file",
+    "attached": "File: {{fileName}}"
+  },
+  "messages": {
+    "bot": "Bot",
+    "typing": "Typing...",
+    "regenerate": "Retry",
+    "edit": "Edit",
+    "delete": "Delete",
+    "copy": "Copy",
+    "usingImageContext": "📸 Referencing previous image"
+  },
+  "personalities": {
+    "flash": {
+      "name": "Flash Model",
+      "description": "Quick responses",
+      "welcomeMessage": "Hi! How can I help?"
+    },
+    "developer": {
+      "name": "Developer Model",
+      "description": "For coding",
+      "welcomeMessage": "Hey! What are we building?"
+    }
+  },
+  "menu": {
+    "rename": "Rename",
+    "delete": "Delete",
+    "download": "Download",
+    "changePersonality": "Change mode",
+    "toggleSearch": "Search",
+    "toggleFullscreen": "Fullscreen",
+    "settings": "Settings"
+  },
+  "states": {
+    "loading": "Loading...",
+    "searching": "Searching...",
+    "processing": "Processing...",
+    "generating": "Creating...",
+    "analyzing": "Analyzing...",
+    "uploading": "Uploading...",
+    "connecting": "Connecting...",
+    "loadingContext": "Loading context...",
+    "usingPreviousImage": "Using previous image...",
+    "disconnected": "No connection",
+    "reconnecting": "Reconnecting..."
+  },
+  "tools": {
+    "internetSearch": "Web search",
+    "getCurrentTime": "Current time",
+    "searchingFor": "Searching: {{query}}",
+    "searchResults": "Results",
+    "noResultsFound": "No results"
+  },
+  "errors": {
+    "general": "Something went wrong",
+    "networkError": "No internet",
+    "apiKeyMissing": "Missing API key",
+    "apiKeyInvalid": "Wrong API key",
+    "quotaExceeded": "Limit exceeded",
+    "fileUploadError": "File upload failed",
+    "fileTooBig": "File too big",
+    "fileTypeNotSupported": "File type not supported",
+    "conversationNotFound": "Chat not found",
+    "messageTooLong": "Message too long",
+    "cannotDeleteLastConversation": "Can't delete last chat",
+    "summaryGenerationFailed": "Error making summary"
+  },
+  "success": {
+    "messageRegenerating": "Retrying...",
+    "messageCopied": "Copied",
+    "conversationRenamed": "Renamed",
+    "conversationDeleted": "Deleted",
+    "conversationDownloaded": "Downloaded",
+    "fileUploaded": "File uploaded",
+    "settingsSaved": "Saved",
+    "newConversationCreated": "New chat",
+    "personalityChanged": "Mode changed",
+    "summaryGenerated": "Summary created",
+    "searchEnabled": "Search on",
+    "searchDisabled": "Search off",
+    "fullscreenEnabled": "Fullscreen on",
+    "fullscreenDisabled": "Fullscreen off"
+  },
+  "actions": {
+    "send": "Send",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "delete": "Delete",
+    "rename": "Rename",
+    "download": "Download",
+    "upload": "Upload",
+    "copy": "Copy",
+    "edit": "Edit",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "retry": "Retry",
+    "refresh": "Refresh"
+  },
+  "confirmations": {
+    "deleteConversation": "Delete this chat?",
+    "deleteMessage": "Delete message?",
+    "clearAllConversations": "Delete all chats?",
+    "resetSettings": "Reset settings?"
+  },
+  "file": {
+    "selectFile": "Choose file",
+    "dropFileHere": "Drop file here",
+    "supportedFormats": "Formats: {{formats}}",
+    "maxFileSize": "Max: {{size}}",
+    "processing": "Processing...",
+    "analyzing": "Analyzing...",
+    "ready": "Ready"
+  },
+  "accessibility": {
+    "openSidebar": "Open sidebar",
+    "closeSidebar": "Close sidebar",
+    "scrollToBottom": "Go to bottom",
+    "focusInput": "Focus input",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "selectPersonality": "Choose mode"
+  },
+  "time": {
+    "now": "now",
+    "minuteAgo": "1 min ago",
+    "minutesAgo": "{{count}} min ago",
+    "hourAgo": "1h ago",
+    "hoursAgo": "{{count}}h ago",
+    "dayAgo": "yesterday",
+    "daysAgo": "{{count}} days ago",
+    "weekAgo": "1 week ago",
+    "weeksAgo": "{{count}} weeks ago",
+    "monthAgo": "1 month ago",
+    "monthsAgo": "{{count}} months ago",
+    "yearAgo": "1 year ago",
+    "yearsAgo": "{{count}} years ago"
+  },
+  "search": {
+    "placeholder": "Search...",
+    "noResults": "No results for '{{query}}'",
+    "resultsFound": "{{count}} result(s)",
+    "searchInProgress": "Searching...",
+    "clearSearch": "Clear"
+  },
+  "settings": {
+    "language": "Language",
+    "theme": "Theme",
+    "notifications": "Notifications",
+    "privacy": "Privacy",
+    "about": "About",
+    "version": "Version",
+    "clearData": "Clear data",
+    "exportData": "Export",
+    "importData": "Import"
+  },
+  "features": {
+    "dualPersonality": "Two AI modes",
+    "multimodalAnalysis": "File analysis",
+    "realTimeResponses": "Fast responses",
+    "conversationMemory": "Chat memory",
+    "internetSearch": "Web search",
+    "fileAnalysis": "File analysis",
+    "codeGeneration": "Code generation",
+    "languageSupport": "Multi language"
+  }
+}
